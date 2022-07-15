@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kov
+  name: cre
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: kov
+      app: cre
   template:
     metadata:
       labels:
-        app: kov
+        app: cre
     spec:
       containers:
-      - image: okteto.dev/kov:latest
-        name: kov
+      - image: okteto.dev/cre:latest
+        name: cre
         ports:
         - containerPort: 8080
         env:
