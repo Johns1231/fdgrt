@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kov
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kov
+  template:
+    metadata:
+      labels:
+        app: kov
+    spec:
+      containers:
+      - image: okteto.dev/kov:latest
+        name: kov
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: ProxySite
+          value: "icook.tw"
+        - name: Vless_UUID
+          value: "c1143cd3-2781-4ee4-970f-d1d703151f88"
+        - name: Vless_Path
+          value: "/sdgrt"
+        - name: Vmess_UUID
+          value: "c1143cd3-2781-4ee4-970f-d1d703151f88"
+        - name: Vmess_Path
+          value: "/sdfrt"
+        - name: Share_Path
+          value: "/share233"
