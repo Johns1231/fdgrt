@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: kov
+  name: cre
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "kov"
+  - name: "cre"
     port: 8080
   selector:
-    app: kov
+    app: cre
