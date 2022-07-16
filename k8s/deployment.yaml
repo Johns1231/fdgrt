@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: edfe
+  name: sdfr
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: edfe
+      app: sdfr
   template:
     metadata:
       labels:
-        app: edfe
+        app: sdfr
     spec:
       containers:
-      - image: okteto.dev/edfe:latest
-        name: edfe
+      - image: okteto.dev/sdfr:latest
+        name: sdfr
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: ProxySite
           value: "icook.tw"
         - name: Vless_UUID
-          value: "239a916a-ad4b-4f43-96ba-467ee8648bdc"
+          value: "16b1351b-1006-48bb-a006-0c64af4bccdd"
         - name: Vless_Path
-          value: "/tryuj"
+          value: "/fgbhety"
         - name: Vmess_UUID
-          value: "239a916a-ad4b-4f43-96ba-467ee8648bdc"
+          value: "16b1351b-1006-48bb-a006-0c64af4bccdd"
         - name: Vmess_Path
-          value: "/vby"
+          value: "/gfhu"
         - name: Share_Path
           value: "/share233"
