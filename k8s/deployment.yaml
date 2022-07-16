@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fdg
+  name: edfe
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: fdg
+      app: edfe
   template:
     metadata:
       labels:
-        app: fdg
+        app: edfe
     spec:
       containers:
-      - image: okteto.dev/fdg:latest
-        name: fdg
+      - image: okteto.dev/edfe:latest
+        name: edfe
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: ProxySite
           value: "icook.tw"
         - name: Vless_UUID
-          value: "b6dd1952-1d88-4861-bfa9-9fc024b0d5a3"
+          value: "239a916a-ad4b-4f43-96ba-467ee8648bdc"
         - name: Vless_Path
-          value: "/fghyu"
+          value: "/tryuj"
         - name: Vmess_UUID
-          value: "b6dd1952-1d88-4861-bfa9-9fc024b0d5a3"
+          value: "239a916a-ad4b-4f43-96ba-467ee8648bdc"
         - name: Vmess_Path
-          value: "/dter"
+          value: "/vby"
         - name: Share_Path
           value: "/share233"
